@@ -2,12 +2,12 @@
 
 Uma ferramenta de segurança para fazer uma varredura simples
 
-##Introdução
+## Introdução
 O SiteSweep é uma ferramenta que ajuda a identificar vulnerabilidades e diretórios não anexados
 
 `ACHO IMPORTANTE DESTACAR QUE O TUTORIAL DE INSTALAÇÃO E EXECUÇÃO FOI FEITO PARA O SISTEMA OPERACIONAL LINUX`
 
-##Instalação
+## Instalação
 para instalar o SiteSweep execute os seguintes comandos:
 
 ```
@@ -22,12 +22,12 @@ cd SiteSweep
 pip install -r requirements.txt
 ```
 
-##Funcionalidades
+## Funcionalidades
 - Identificar vunerabilidade xss
 - Fornecer relatorio sobre as vunerabilidades
 - Mapear diretoreos
 
-##Exemplo de uso
+## Exemplo de uso
 ```py
 from sitesweep import Scopo
 
@@ -81,9 +81,9 @@ print(site)
 
 ```
 
-##Contribuição
+## Contribuição
 Para contribuir com o SiteSweep envie um `pull request` para o repositorio do git GitHub
 
-##Licença
+## Licença
 o SiteSweep é distribuido pela licença CC BY-NC 4.0
 
