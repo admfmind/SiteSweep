@@ -1,0 +1,3 @@
+reuquests
+bs4
+json
