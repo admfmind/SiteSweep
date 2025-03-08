@@ -1,11 +1,11 @@
 # SiteSweep
 
-Uma ferramenta de segurança para fazer uma varredura simples
+Uma ferramenta de segurança para fazer uma varredura simples.
 
 ## Introdução
-O SiteSweep é uma ferramenta que ajuda a identificar vulnerabilidades e diretórios não anexados
+O SiteSweep é uma ferramenta que ajuda a identificar vulnerabilidades e diretórios não anexados.
 
-`ACHO IMPORTANTE DESTACAR QUE O TUTORIAL DE INSTALAÇÃO E EXECUÇÃO FOI FEITO PARA O SISTEMA OPERACIONAL LINUX`
+`ACHO IMPORTANTE DESTACAR QUE O TUTORIAL DE INSTALAÇÃO FOI FEITO PARA O SISTEMA OPERACIONAL LINUX`
 
 ## Instalação
 para instalar o SiteSweep execute os seguintes comandos:
@@ -82,9 +82,14 @@ print(site)
 
 ```
 
+## Como funciona
+`Busca de diretorios no html:` É filtrado por meio da biblioteca __bs4__ todo o conteudo da tag __href__ de todo o html. Alem de diretórios, também é possível achar links, por isso ao utilizar essa função ele registra esses links nos dados.
+`Forçar diretios:` Apos a requisição utilizando o diretorio (http://exemplo.com/diretorio), é analizado o codigo da resposta, se o código for entre 200 e 299, sera retornado como um diretório veridico(que existe) no site, mas caso seja entre 300 e 399 ira retornar como diretório redirecionado(diretorio não existe). Outros tipos de código de resposta não são registrados.
+`Verificação da existência de XSS:` É feito uma análise no código html. Se existe um formulário(<form>), sera salvo todos os conteúdos das tag's __action__ deles e depois o conteudo das entradas de dados(<input>) da tag __name__, apos isso ser afeita requisições utilizando as tag's action como diretório e sera enviado via post para o input um código js, se o código js tiver presente no html da resposta da requisição, sera salvo como vulnerabilidade encontrada.
+
 ## Contribuição
-Para contribuir com o SiteSweep envie um `pull request` para o repositorio do git GitHub
+Para contribuir com o SiteSweep envie um `pull request` para o repositorio do git GitHub.
 
 ## Licença
-o SiteSweep é distribuido pela licença CC BY-NC 4.0
+o SiteSweep é distribuido pela licença CC BY-NC 4.0.
 
