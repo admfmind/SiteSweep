@@ -87,7 +87,7 @@ print(site)
 
 `Forçar diretios:` Apos a requisição utilizando o diretorio (http://exemplo.com/diretorio), é analizado o codigo da resposta, se o código for entre 200 e 299, sera retornado como um diretório veridico(que existe) no site, mas caso seja entre 300 e 399 ira retornar como diretório redirecionado(diretorio não existe). Outros tipos de código de resposta não são registrados.
 
-`Verificação da existência de XSS:` É feito uma análise no código html. Se existe um formulário(<form>), sera salvo todos os conteúdos das tag's __action__ deles e depois o conteudo das entradas de dados(<input>) da tag __name__, apos isso ser afeita requisições utilizando as tag's action como diretório e sera enviado via post para o input um código js, se o código js tiver presente no html da resposta da requisição, sera salvo como vulnerabilidade encontrada.
+`Verificação da existência de XSS:` É feito uma análise no código html. Se existe um formulário(form), sera salvo todos os conteúdos das tag's __action__ deles e depois o conteudo das entradas de dados(input) da tag __name__, apos isso ser afeita requisições utilizando as tag's action como diretório e sera enviado via post para o input um código js, se o código js tiver presente no html da resposta da requisição, sera salvo como vulnerabilidade encontrada.
 
 ## Contribuição
 Para contribuir com o SiteSweep envie um `pull request` para o repositorio do git GitHub.
