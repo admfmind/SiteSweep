@@ -71,7 +71,8 @@ site.gerar_relatorio('json')
 """
 Esta função utiliza todas as outras de uma vez.
 
-Esta função recebe o nome do arquivo que sera esta com os nomes do diretorios. ela deve receber esse nome como uma string, caso queira usar os diretórios da ferramenta, utilize como parametros o None
+1° parâmetro: objeto Scopo
+2° parâmetro desta função: recebe o nome do arquivo com os nomes dos diretorios. ele deve receber esse nome como uma string, caso queira usar os diretórios da ferramenta, utilize como parametros o None
 Para usar seu arquivo: geral('exemplo.txt')
 Para usar os da ferramenta: geral(None)
 """
