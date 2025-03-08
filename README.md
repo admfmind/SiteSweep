@@ -60,13 +60,6 @@ site = Scopo('http://exemplo.com/', 'exemplo.com')
 site.forcar_diretorio(None)
 print(site)
 
-# GERAR RELATÓRIO
-
-# em .txt
-site.gerar_relatorio('txt')
-# em .json
-site.gerar_relatorio('json')
-
 # FAZER VERIFICAÇÃO COMPLETA
 """
 Esta função utiliza todas as outras de uma vez.
@@ -79,6 +72,13 @@ Para usar os da ferramenta: geral(None)
 site = Scopo('http://exemplo.com/', 'exemplo.com')
 site.geral(None)
 print(site)
+
+# GERAR RELATÓRIO
+
+# em .txt
+site.gerar_relatorio('txt')
+# em .json
+site.gerar_relatorio('json')
 
 ```
 
