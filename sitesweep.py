@@ -195,7 +195,7 @@ INJEÇÃO DE JAVA SCRIPT__________________| {cor(3)}{xss}
                 if script in str(resposta_site.text):
                     self.injecao_js.append(f'form(action): {form}\ninput(name): {input}')
 
-    def geral(self, nome_arquivo):
+    def geral(self, site, nome_arquivo):
         site.buscar_xss()
         site.buscar_diretorios()
         site.forca_diretorio(nome_arquivo)
