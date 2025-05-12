@@ -31,6 +31,8 @@ pip install -r requirements.txt
 ```py
 from sitesweep import Scopo
 
+site = Scopo('http://exemplo.com/', 'exemplo.com')
+
 """
 o cabeçalho da requisicao dessa ferramenta foi alterado.
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3
@@ -38,12 +40,10 @@ Cache-Control: max-age=6000
 """
 
 # BUSCAR XSS
-site = Scopo('http://exemplo.com/', 'exemplo.com')
 site.buscar_xss()
 print(site)
 
 # BISCAR LINKS E DIRETÓRIOS NO HTML
-site = Scopo('http://exemplo.com/', 'exemplo.com')
 site.buscar_diretorios()
 print(site)
 
@@ -53,10 +53,9 @@ Você pode utilizar os 340 diretórios pré-definidos ou
 utilizar seu arquivo de preferencia.
 Ao chamar a função forcar_dirrtorio()
 
-Para usar os diretorios da ferramenta chame a função desse modo: forcar_dirrtorio(None)
+Para usar os diretorios da ferramenta chame a função desse modo: forcar_diretorio(None)
 Para usar seus diretórios coloque o nome do arquivo na função: forcar_diretorio('exemplo.txt')
 """
-site = Scopo('http://exemplo.com/', 'exemplo.com')
 site.forcar_diretorio(None)
 print(site)
 
@@ -65,12 +64,10 @@ print(site)
 Esta função utiliza todas as outras de uma vez.
 
 1° parâmetro: objeto Scopo
-2° parâmetro desta função: recebe o nome do arquivo com os nomes dos diretorios. ele deve receber esse nome como uma string, caso queira usar os diretórios da ferramenta, utilize como parametros o None
-Para usar seu arquivo: geral('exemplo.txt')
-Para usar os da ferramenta: geral(None)
+2° parâmetro: recebe o nome do arquivo com os nomes dos diretorios. ele deve receber esse nome como uma string.
+caso queira usar os diretórios da ferramenta, utilize como 2° parametros o None.
 """
-site = Scopo('http://exemplo.com/', 'exemplo.com')
-site.geral(None)
+site.geral(site, None)
 print(site)
 
 # GERAR RELATÓRIO
