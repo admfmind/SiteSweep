@@ -11,9 +11,9 @@ O SiteSweep é uma ferramenta que ajuda a identificar vulnerabilidades e diretó
 para instalar o SiteSweep execute os seguintes comandos:
 
 ```
-pkg install python3 -y
+apt install python3 -y
 
-pkg install git -y
+apt install git -y
 
 git clone https://github.com/admfmind/SiteSweep
 
