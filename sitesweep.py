@@ -235,7 +235,7 @@ INJEÇÃO DE JAVA SCRIPT__________________| {cor(3)}{xss}
                 "diretorios_padina": self.diretorios_aparentes,
                 "injecao_js": self.injecao_js
             }
-            salvar_arquivo('SWEEP-dados.json', str(dados).replace("'", '"'))
+            salvar_arquivo('SWEEP-dados.json', dados)
 
         else:
             print('\nmetodo de salvar arquivo não existe')
